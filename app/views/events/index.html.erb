@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+  <style>
+  	body {background-color: #ff9999;}
+  </style>
+<% @events.each do |event|%>
+
+<div class="jumbotron">
+  <h1 class="display-4"><%=event.title%>!</h1>
+  <p class="lead"> <%=event.start_date%></p>
+  <hr class="my-4">
+  <p> <%=event.description%></p>
+  <p>Price: <%=event.price%> €</p>
+   <p>Durée: <%=event.duration%> mn</p>
+
+   
+    <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+  </p>
+</div>
+<%end%>
+
+ 
+               
+ </body>
+ </html>
+     
+                     

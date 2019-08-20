@@ -10,15 +10,25 @@
 <% @events.each do |event|%>
 
 <div class="jumbotron">
-  <h1 class="display-4"><%=event.title%>!</h1>
-  <p class="lead"> <%=event.start_date%></p>
+  <h1 class="display-4">💫 ⭐️ 🌟 ✨<%=event.title%>! 🌟 ✨</h1>
+  <p class="lead", style="text-align:center"> <%=event.start_date%></p>
   <hr class="my-4">
-  <p> <%=event.description%></p>
-  <p>Price: <%=event.price%> €</p>
-   <p>Durée: <%=event.duration%> mn</p>
+  <p  style="text-align:center"> <%=event.description%></p>
+  <p style="text-align:center">Prix: <%=event.price%> €</p>
+   <p style="text-align:center">Durée: <%=event.duration%> mn</p>
+    <p style="text-align:center">Lieu: <%=event.location%> </p>
+     <% if user_signed_in? %>
+     <p style="text-align:center"> Réalisateur: <%=event.admin.first_name%> </p>
+  
+    
+    <center><a class="btn btn-primary btn-lg",role="button" <%=link_to "Participer",new_event_attendance_path(event.id) , :data => {method: :create} %> </a> </center>
 
-   
-    <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+    <%else%>
+     
+    <p style="text-align:center"> Pour participer inscrivez-vous <%=link_to "ici",new_user_registration_path%> </p>
+    
+    <%end%>
+    
   </p>
 </div>
 <%end%>
@@ -28,4 +38,4 @@
  </body>
  </html>
      
-                     
+                    

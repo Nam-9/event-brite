@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
- before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
   def index
   	@events = Event.all
@@ -23,7 +23,7 @@ class EventsController < ApplicationController
   	 	                     description:params[:description],
   	 	                     price:params[:price], 
   	 	                     location:params[:location],
-  	 	                     admin_id:(rand(1..20))
+  	 	                     admin_id:(current_user.id)
   	 	                   )
    if @event.save
       flash[:success] = " 👌"

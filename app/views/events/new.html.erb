@@ -12,35 +12,35 @@
 <%= form_tag url_for(action: 'create'), method: "post" do %>
 
      
-      <%= label_tag 'start_date' %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <%= date_field 'start_date', @event.start_date %>
+      <center><%= label_tag 'start_date' %></center>
+      <center><%= date_field 'start_date', @event.start_date %></center>
       <br /> <br />
 
-      <%= label_tag 'duration' %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <%= text_field 'duration', @event.duration %>
-      <br /> <br />
-
-
-      <%= label_tag 'title' %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <%= text_field 'title', @event.title %>
+      <center><%= label_tag 'duration' %></center>
+      <center><%= text_field 'duration', @event.duration %></center>
       <br /> <br />
 
 
-
-      <%= label_tag 'description' %>
-      <%= text_area_tag 'description', @event.description %>
+      <center><%= label_tag 'title' %></center>
+      <center><%= text_field 'title', @event.title %></center>
       <br /> <br />
 
 
-      <%= label_tag 'price' %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <%= text_field 'price', @event.price %>
+
+      <center><%= label_tag 'description' %></center>
+      <center><%= text_area_tag 'description', @event.description %></center>
       <br /> <br />
 
-      <%= label_tag 'location' %>&nbsp&nbsp&nbsp&nbsp&nbsp
-      <%= text_field'location', @event.location %>
+
+      <center><%= label_tag 'price' %></center>
+      <center><%= text_field 'price', @event.price %></center>
       <br /> <br />
 
-     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%= submit_tag "Create Event" %>
+      <center><%= label_tag 'location' %></center>
+      <center><%= text_field'location', @event.location %></center>
+      <br /> <br />
+
+ <center><%= submit_tag "Create Event" %></center>
 
     <% end %>
 

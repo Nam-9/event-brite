@@ -21,7 +21,7 @@ require 'faker'
                        email:"#{Faker::Name.first_name}@yopmail.com", 
                        password: Faker::Internet.password)
 
-    user.save
+    
 
 end
 
@@ -29,8 +29,8 @@ puts "User ok"
 
 20.times do
 
-    event = Event.create( title: "Mon super event ",
-                         description: "La description super event",
+    event = Event.create( title: "Mon super event",
+                         description:Faker::TvShows::HowIMetYourMother.quote,
 
                     price: rand(1...1000),
 
@@ -41,7 +41,7 @@ puts "User ok"
                     duration: 5*rand(1..120),
 
                     admin: User.all.sample)
-
+ i+= 1
 end
 
 puts "Event added"

@@ -12,7 +12,9 @@ root 'events#index'
   get 'events/index'
   #get 'events/new'	
   #get 'events/create'
-  resources :events
+  resources :events do
+  resources :attendances
+  end
   #resources :user
 
   devise_scope :user do
